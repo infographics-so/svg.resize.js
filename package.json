@@ -14,16 +14,16 @@
     "name": "Ulrich-Matthias Schäfer"
   },
   "homepage": "https://github.com/svgdotjs/svg.resize.js",
-  "main": "dist/svg.resize.umd.cjs",
+  "main": "src/svg.resize.js",
   "unpkg": "dist/svg.resize.iife.js",
   "jsdelivr": "dist/svg.resize.iife.js",
-  "module": "dist/svg.resize.js",
+  "module": "src/svg.resize.js",
   "typings": "./svg.resize.js.d.ts",
   "exports": {
     ".": {
       "import": {
         "types": "./svg.resize.js.d.ts",
-        "default": "./dist/svg.resize.js"
+        "default": "./src/svg.resize.js"
       },
       "require": {
         "types": "./svg.resize.js.d.cts",
@@ -36,14 +36,13 @@
     }
   },
   "files": [
-    "/dist",
     "/src",
     "/svg.resize.js.d.ts"
   ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && prettier --write . && eslint ./src && vite build",
-    "zip": "zip -j dist/svg.resize.js.zip -- LICENSE README.md dist/svg.resize.iife.js  dist/svg.resize.iife.js.map  dist/svg.resize.js  dist/svg.resize.js.map  dist/svg.resize.umd.cjs  dist/svg.resize.umd.cjs.map",
+    "zip": "zip -j src/svg.resize.js.zip -- LICENSE README.md dist/svg.resize.iife.js  dist/svg.resize.iife.js.map  dist/svg.resize.js  dist/svg.resize.js.map  dist/svg.resize.umd.cjs  dist/svg.resize.umd.cjs.map",
     "prepublishOnly": "rm -rf ./dist && npm run build",
     "postpublish": "npm run zip"
   },
