@@ -124,6 +124,7 @@ export class ResizeHandler {
     this.startPoint = this.el.point(getCoordsFromEvent(event))
     this.index = index
     this.points = points.slice()
+    this.transform = this.el.transform
 
     // We consider the resize done, when a touch is canceled, too
     const eventMove = (isMouse ? 'mousemove' : 'touchmove') + '.resize'
