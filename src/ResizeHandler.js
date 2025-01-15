@@ -297,6 +297,10 @@ export class ResizeHandler {
     this.eventType = ''
     off(window, 'mousemove.resize touchmove.resize')
     off(window, 'mouseup.resize touchend.resize')
+
+    if (this.el.dispatch('afterresize', { event: ev, handler: this }).defaultPrevented) {
+      return
+    }
   }
 
   snapToGrid(point) {
